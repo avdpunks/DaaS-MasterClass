@@ -1,4 +1,4 @@
-![header](Images/newheader.png)
+![header](Images/header.png)
 
 # DaaS Master Class
 
