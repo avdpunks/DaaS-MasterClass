@@ -45,7 +45,7 @@ Azure supports multiple types of storage accounts for different storage scenario
 
 General purpose version 2 (GPv2) storage accounts: GPv2 storage accounts allow you to deploy Azure file shares on standard/hard disk-based (HDD-based) hardware. In addition to storing Azure file shares, GPv2 storage accounts can store other storage resources such as blob containers, queues, or tables. File shares can be deployed into the transaction optimized (default), hot, or cool tiers.
 
-![Create Storage account](../../Images/SolutionGuide/AVD/SolutionGuide/AVD/03-FSLogix_create-storage-account-0.png)
+![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-0.png)
 
 To create a storage account via the Azure portal, search for **Storage accounts** and select the resulting search result. This will lead to an overview page for storage accounts. 
 
