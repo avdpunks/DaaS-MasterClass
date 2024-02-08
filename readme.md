@@ -76,7 +76,4 @@ You will receive your Admin & User credential personally and take good care of i
 - [Ben Martin Baur](https://www.linkedin.com/in/ben-martin-baur/)
 - [Daniel Weppeler](https://www.linkedin.com/in/daniel-weppeler/)
 
-## Workshop Resources
-- comming soon
-
 Engineered and powered by [avdpunks.com](https://avdpunks.com)
