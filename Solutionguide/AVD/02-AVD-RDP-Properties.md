@@ -16,6 +16,7 @@
 ## Step 1 - Configure AVD Hostpool RDP properties 
 
 ### Option 1 via Azure Portal
+
 In your pooled / multi-session Host pool (RemoteApp), navigate to **RDP Properties**.
 
 ![RDP Property](../../Images/SolutionGuide/AVD/03-RDPProperty_1.png)

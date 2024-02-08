@@ -17,7 +17,7 @@ Create multi-session hostpool joined in Azure Active Directory
 Login to the session host
 - Log in as a user and verify that the operating system is a multi-session build
 
-Deploy Microsoft Word and Excel (or whatever) as Remote App
+Deploy Microsoft Edge and Word (or whatever) as Remote App
 
 ## Success Criteria
 1.	Host Pools are created and Session Hosts are showing available
@@ -41,29 +41,27 @@ Deploy Microsoft Word and Excel (or whatever) as Remote App
 
 > **Info:** This will only effect metadata. The Datacenter location for virtual machines will follow. 
 
-Change **Validation environment** to **Yes**.
+Change **Validation environment** to **No**.
 Once complete, select **Next: Virtual Machines**.
 
 ![This image shows where you will enter the information for the host pool.](../../Images/SolutionGuide/AVD/02-Hostpool_create_multisession_2.png "Create pooled host pool page")
 
-5. Navigate to **Virtual Machines** at the top and select **Show All Images** to find your recently created image. 
+5. Navigate to **Virtual Machines** at the top and select **Yes** to add new virtual machines to your AVD Host pool.
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_create_sessionhosts_2.png)
+Select your **Resource group** and enter a **VM name prefix**, it will automatically append "-[number]" to the VM name. Follow the values shown in the image below:
 
-6. Next, go to **My Items** then select **Shared Images** and click on your recently created image.
+![This image shows where you will enter the information for the AVD session hosts.](../../Images/SolutionGuide/AVD/02-Hostpool_create_sessionhosts_2.png)
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_create_sessionhosts_3.png)
 
-7. Now your recently created image should be displayed as an image parameter. Click **Next: Workspace**.
+![This image shows where you will enter the information for the AVD session hosts.](../../Images/SolutionGuide/AVD/02-Hostpool_create_sessionhosts_3.png)
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_create_sessionhosts_4.png)
-     ![This image shows the image that you need for your host pool virtual machine.](../../Images/SolutionGuide/AVD/01-vmwith365_3.png "Host pool Virtual Machine with image")
+In the last step, enter your local admin credentials, skip the custom URL configuration and click **Next: Workspace**.
  
-8.  On the Workspace page, select **Yes** to register a new desktop app group. Select **Create new** and provide a **Workspace name**. Select **OK** and **Review + create**.
+7.  On the Workspace page, select **Yes** to register a new desktop app group. Select **Create new** and provide a **Workspace name**. Select **OK** and **Review + create**.
 
-   ![This image shows how from the create a host pool workspace tab, enter the required information.](../../Images/SolutionGuide/AVD/02-hostpoolWorkspace.png "Create a host pool workspace tab")
+![This image shows how from the create a host pool workspace tab, enter the required information.](../../Images/SolutionGuide/AVD/02-hostpoolWorkspace.png "Create a host pool workspace tab")
 
-9.  On the Create a host pool page, select **Create**.
+8.  On the Create a host pool page, select **Create**.
 
 > **Note**: If you are trying to access your virtual desktop from Windows devices or other devices that are not connected to Azure AD, add **targetisaadjoined:i:1** as a custom RDP property to the host pool. [More information here](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-ad-joined-vm#access-azure-ad-joined-vms)
 
@@ -86,57 +84,41 @@ To make only a single application available to the user, instead of the full des
 
 1. Navigate to the Azure Virtual Desktop and select **Application Groups** and click **Create**.
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-1.png)
+![This image shows to create a new application group.](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-1.png)
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-2.png)
+2. On the Basic tab, select your **resource group**, your multi-session AVD **host pool** and enter an **application group name**.
 
-Create a new Application group
-- **Select your Resource group**
-- **Select your multi-session AVD Host pool**
-- Application group type: **Remote App (RAIL)**
-- Application group name: **HP-PooledVMs-RAG**
-- click **Next: Applications**
+![This image shows to create a new application group.](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-2.png)
 
-2. Click on **Add applications**
+Click **Next: Applications**
 
-![Create Image](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-1.png)
+2. Next, select the application you want to add to its application group and click **Add applications**.
 
-Select:
-- Application source: **Start Menu**
-- Application: **Visual Studio Code**
+![This image shows to add an application to the application group.](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-1.png)
 
-![Create Image](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-4.png)
+Then select **Start menu** as the application source and **Microsoft Edge** (for example) as the application .
 
-- Click on **Save** and add another application.
+![TThis image shows to add an application to the application group.](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-4.png)
 
-Select:
-- Application source: **Filepath**
+Click **Review + add**, then **Add** and add another application from the start menu as the application source.
 
-> **Note**: The reason why you can´t use the start menu as **Application Source** this time is because the "++" is interpreted by the AVD agent and the application is therefore not found. But if we use the **File path** option it works.
+![This image shows to add an application to the application group.](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-5.png)
 
-- Application path: **C:\Program Files\Notepad++\notepad++.exe**
-- Application name: **NotepadPP** 
-- Icon Path: **C:\Program Files\Notepad++\notepad++.exe**
-- Icon Index: 0
+Click **Next: Assignments**.
 
-![Create Image](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-3.png)
+3. Assign the AVD Users group to the Application group which should have access to the RemoteApps.
 
-
-- Click on **Save** and **Next: Assignments**
-
-3. Assign the AVDUsers group to the Application group which should have access to the Notepad++ RemoteApp.
-
-![Create Image](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-2.png)
+![This image shows to assign an user group to the application group.](../../Images/SolutionGuide/AVD/03-Hostpool_RemoteApp-2.png)
 
 Click **Next: Workspace**
 
 4. Toggle **Register Application Group** to yes and click **Review + create**.
 
-![Create Image](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-2-1.png)
+![CThis image shows to assign an user group to the application group.](../../Images/SolutionGuide/AVD/02-Hostpool_RemoteApp-2-1.png)
 
 > If another application group in the AVD host pool has already been registered then this app group will also be registered to that same workspace.
 
-Next, start your Remote Desktop Client App, refresh the AVD Workspace and launch the Notepad++ application.
+Next, start your Remote Desktop Client App, refresh the AVD Workspace and launch the Remote Apps.
 
 > **Note**: If you are trying to access your virtual desktop from Windows devices or other devices that are not connected to Azure AD, add **targetisaadjoined:i:1** as a custom RDP property to the host pool. [More information here](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-ad-joined-vm#access-azure-ad-joined-vms)
 

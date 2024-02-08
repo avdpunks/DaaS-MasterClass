@@ -20,7 +20,7 @@ Login to the session host
 - Log in as a user and verify that the operating system is a multi-session build
 
 Create new Remote Apps
-- Deploy Microsoft Word and Excel (or whatever) as Remote Apps
+- Deploy Microsoft Edge and Word (or whatever) as Remote Apps
 
 ## Success Criteria
 1.	Host Pools are created and Session Hosts are showing available

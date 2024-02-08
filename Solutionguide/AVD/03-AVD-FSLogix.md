@@ -36,16 +36,20 @@ In order to use profile containers, you'll need to configure FSLogix on your ses
 - A profile container with FSLogix is successfully created 
 - Check that your profiles are working as expected
 
-## Step 1 - Create a storage account
+
+
+## Task 1: Create a storage account
 Azure file shares are deployed into storage accounts, which are top-level objects that represent a shared pool of storage. This pool of storage can be used to deploy multiple file shares.
 
 Azure supports multiple types of storage accounts for different storage scenarios customers may have, but there are two main types of storage accounts for Azure Files. Which storage account type you need to create depends on whether you want to create a standard file share or a premium file share:
 
 General purpose version 2 (GPv2) storage accounts: GPv2 storage accounts allow you to deploy Azure file shares on standard/hard disk-based (HDD-based) hardware. In addition to storing Azure file shares, GPv2 storage accounts can store other storage resources such as blob containers, queues, or tables. File shares can be deployed into the transaction optimized (default), hot, or cool tiers.
 
-![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-0.png)
+![Create Storage account](../../Images/SolutionGuide/AVD/SolutionGuide/AVD/03-FSLogix_create-storage-account-0.png)
 
-To create a storage account via the Azure portal, select + Create a resource from the dashboard. In the resulting Azure Marketplace search window, search for storage account and select the resulting search result. This will lead to an overview page for storage accounts; select Create to proceed with the storage account creation wizard.
+To create a storage account via the Azure portal, search for **Storage accounts** and select the resulting search result. This will lead to an overview page for storage accounts. 
+
+Select **Create** to proceed with the storage account creation wizard.
 
 FileStorage storage accounts: FileStorage storage accounts allow you to deploy Azure file shares on premium/solid-state disk-based (SSD-based) hardware. FileStorage accounts can only be used to store Azure file shares; no other storage resources (blob containers, queues, tables, etc.) can be deployed in a FileStorage account.
 
@@ -68,24 +72,29 @@ Click on **+ File share** on the top.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-3.png)
 
-Create a file share 
-- Name: **fslogixfs (or something similar)**
+Create a file share with the following specs:
+- Name: **profiles (or something similar)**
 - Tier: **Transaction optimized**
-- click **create**
+- Click **create**
+
+Click on **Next:Backup** and please deactivate the Azure backup functionality.
+
+![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-3-1.png)
+
+Next, **Review + create** to create the Azure file share. 
 
 > Note: To use SMB protocol with this share, you need to check if you can communicate over port 445. [Script for Windows Client](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows)
 
-When the file share is created, navigate to File shares in your Storage account. Beneath File share settings, click on **Identity-based access: Not configured**.
+When the file share is created, navigate to File shares in your Storage account. Beneath File share settings, click on **Active directory: Not configured**.
 We need to enable Identity-based access for the file share in this storage account.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-6.png)
 
-As we are using Microsoft Entra Kerberos in this Microhack, click on **Microsoft Entra Kerberos**.
+As we are using Microsoft Entra ID Kerberos in this Microhack, click on **Azure AD Kerberos**.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-7.png)
 
-**Click on the check-box** to enable Microsoft Entra Kerberos for this file share. 
-
+**Click on the check-box** to enable Azure AD Kerberos for this file share. 
 To configure directory and file level permissions through Windows File explorer, you also need to specify domain name and domain GUID for your on-premises AD. 
 You can get this information from your domain admin or from an on-premises AD-joined client. If you prefer to configure using icacls, this step is not required. 
 
@@ -101,7 +110,7 @@ Click on **API permissions** an then on **Grant adminconsent for directoryname**
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-17.png)
 
-## Step 2 - Assign access permissions to an identity
+### Task 2: Assign access permissions to an identity
 
 Other users will need access permissions to access your file share. To do this, you'll need to assign each user a role with the appropriate access permissions.
 
@@ -119,7 +128,7 @@ To assign users access permissions:
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-11.png)
 
-- For Assign access to, select **Microsoft Entra IDuser, group, or service principal**.
+- For Assign access to, select **Microsoft Entra ID user, group, or service principal**.
 - **Select a name or email address for the target Microsoft Entra ID identity**.
 - Select **Save**.
 
@@ -127,12 +136,8 @@ To assign users access permissions:
 
 Click on **Review + assign**
 
-![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-13.png)
-
-## Step 3 - Configure FSLogix settings via Powershell script
-
 > 💡To setup FSLogix on the session Hosts, you need to upload the setupFSLogix.ps1 into a Container in your Storage Account
-[Custom Script Extension Setup FSLogix](../Solutionguide/Sources/setupFSLogix.ps1)
+[Custom Script Extension Setup FSLogix](../Sources/setupFSLogix.ps1)
 
 - Navigate to **your Storage Account** 
 - Select **Containers**
@@ -156,8 +161,8 @@ Click on **Review + assign**
 
 ![Custom Script Extension](../../Images/SolutionGuide/AVD/03-FSLogix_customscriptextension-4.png)
 
-- **Script file** -> browse for the **setupFSLogix.ps1 Script**
-- Arguments: type the UNC Path of your fileshare, e. g. \\uniquesamicroh.file.core.windows.net\fslogixfs
+- For the **script file**, search for the script **setupFSLogix.ps1** in your container.
+- Arguments: type the **UNC Path of your fileshare**, e. g. \\uniquesamicroh.file.core.windows.net\fslogixfs
 - Click on **Review + create**
 
 ![Custom Script Extension](../../Images/SolutionGuide/AVD/03-FSLogix_customscriptextension-5.png)
