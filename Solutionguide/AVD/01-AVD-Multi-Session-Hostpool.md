@@ -5,8 +5,8 @@ In this challenge you will create Azure AD joined pooled desktops from a Microso
 ## Challenge
 
 Create multi-session hostpool joined in Azure Active Directory
-- West Europe Region
-- Metadata located in West Europe
+- North Europe Region
+- Metadata located in North Europe
 - Mark as Validation environment
 - Host Pool type: Pooled
 - Choose Windows 11 Enterprise multi-session Version + Microsoft 365 Apps Gallery image  
