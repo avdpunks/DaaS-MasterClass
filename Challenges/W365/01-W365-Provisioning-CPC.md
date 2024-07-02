@@ -1,4 +1,4 @@
-# Challenege 1: Provisioning a Cloud PC
+# Challenge 1: Provisioning a Cloud PC
 
 [Previous Challenge](../AVD/03-AVD-FSLogix.md) - **[Home](../../readme.md)** - [Next Challenge](./02-W365-RDP-Properties.md)
 
@@ -17,16 +17,15 @@ To set up your system to provision on-demand Cloud PCs for you, you need to:
 - An AAD group with **GRP-PUNK[count]-Users**, e.g. GRP-P1-Users, is already created.
 - Assign licenses to your user/group.
 - Your User should have local admin rights for his Cloud PC.
-- Create an Azure network connection (ANC) so that the cloud PC runs on a self-hosted network.
+- Your Cloud PC is using the "Microsoft Hosted Network"s
 - Create a provisioning policy.
 - **Make sure your Cloud PC has a custom name that is not the default.**
 
 ## Success Criteria
 1.  A Windows365 & Intune License is automatically assigned to your users.
 2.  Your User has local admin rights.
-3.  (If one of the first 10) An ANC is created and the Cloud PC is deployed into a self-hosted network
-4.  A provisioning policy with **PP-PUNK[count]-YourPolicyName** is created.
-5.  A Cloud PC deployment is running.
+3.  A provisioning policy with **PP-PUNK[count]-YourPolicyName** is created.
+4.  A Cloud PC deployment is running.
 
 ## Learning Resources
 - [Deployment overview](https://learn.microsoft.com/en-us/windows-365/enterprise/deployment-overview)

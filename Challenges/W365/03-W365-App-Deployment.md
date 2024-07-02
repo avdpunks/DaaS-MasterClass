@@ -1,4 +1,4 @@
-# Challenege 3: Deploy application via Intune
+# Challenge 3: Deploy application via Intune
 
 [Previous Challenge](./02-W365-RDP-Properties.md) - **[Home](../../readme.md)** - [Next Challenge](../DevBox/01-DevBox-Configure-Dev-Box.md)
 

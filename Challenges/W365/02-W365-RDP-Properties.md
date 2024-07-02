@@ -1,4 +1,4 @@
-# Challenege 2: Configure RDP Properties
+# Challenge 2: Configure RDP Properties
 
 [Previous Challenge](./01-W365-Provisioning-CPC.md) - **[Home](../../readme.md)** - [Next Challenge](./03-W365-App-Deployment.md)
 

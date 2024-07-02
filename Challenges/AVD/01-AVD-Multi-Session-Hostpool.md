@@ -1,4 +1,4 @@
-# Challenege 1: Create a host pool for multi-session
+# Challenge 1: Create a host pool for multi-session
 
 [Previous Challenge](../../readme.md) - **[Home](../../readme.md)** - [Next Challenge](./02-AVD-RDP-Properties.md)
 
