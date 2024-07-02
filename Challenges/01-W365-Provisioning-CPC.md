@@ -1,5 +1,7 @@
 # Challenege 1: Provisioning a Cloud PC
 
+[Previous Challenge](./03-AVD-FSLogix.md) - **[Home](../readme.md)** - [Next Challenge](./02-W365-RDP-Properties.md)
+
 ## Introduction
 
 Windows 365 is a new cloud-based service offered by Microsoft that allows businesses to stream a virtualized version of Windows 10 or Windows 11 to any device with an internet connection. Essentially, it is a subscription-based service that enables users to access a cloud-based Windows desktop from any device, including laptops, tablets, and smartphones, without needing to install Windows locally. The service is designed to provide greater flexibility and scalability to businesses, allowing them to quickly and easily provision Windows-based virtual machines to their employees as needed.

@@ -1,5 +1,7 @@
 # Challenge 3: Enable FSLogix Profile Container
 
+[Previous Challenge](./02-AVD-RDP-Properties.md) - **[Home](../readme.md)** - [Next Challenge](./01-W365-Provisioning-CPC.md)
+
 ## Introduction
 
 The Azure Virtual Desktop service recommends FSLogix profile containers as a user profile solution. FSLogix is designed to roam profiles in Azure Virtual Desktop, mostly needed for multi-session with floating user scenarios.

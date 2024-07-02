@@ -1,5 +1,7 @@
 # Challenege 3: Deploy application via Intune
 
+[Previous Challenge](./02-W365-RDP-Properties.md) - **[Home](../readme.md)** - [Next Challenge](./01-DevBox-Configure-Dev-Box.md)
+
 ## Introduction
 
 As an IT-admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. 

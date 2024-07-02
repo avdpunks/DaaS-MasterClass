@@ -1,5 +1,7 @@
 # Challenege 1: Configure Microsoft Dev Box
 
+[Previous Challenge](./03-W365-App-Deployment.md) - **[Home](../readme.md)** - [Next Challenge](../readme.md)
+
 ## Introduction
 
 Microsoft Dev Box gives developers self-service access to ready-to-code cloud workstations called dev boxes. You can configure dev boxes with tools, source code, and prebuilt binaries that are specific to a project, so developers can immediately start work. You can create your own customized image, or use a preconfigured image from Azure Marketplace, complete with Visual Studio already installed.

@@ -1,5 +1,7 @@
 # Challenege 2: Configure RDP Properties
 
+[Previous Challenge](./01-W365-Provisioning-CPC.md) - **[Home](../readme.md)** - [Next Challenge](./03-W365-App-Deployment.md)
+
 ## Introduction
 
 With the Remote Desktop Protocol (RDP) you can create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. 

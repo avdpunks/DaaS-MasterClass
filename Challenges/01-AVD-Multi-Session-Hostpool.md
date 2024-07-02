@@ -1,5 +1,7 @@
 # Challenege 1: Create a host pool for multi-session
 
+[Previous Challenge](../readme.md) - **[Home](../readme.md)** - [Next Challenge](./02-AVD-RDP-Properties.md)
+
 ## Introduction
 
 In this challenge you will create Microsoft Entra ID joined pooled desktops from a Microsoft Windows 11 Multi-Session Gallery Image. After the deployment you will connect to this session host with the native or web Remote Desktop client. 

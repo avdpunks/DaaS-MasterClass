@@ -1,5 +1,7 @@
 # Challenge 2: Configure RDP Properties
 
+[Previous Challenge](./01-AVD-Multi-Session-Hostpool.md) - **[Home](../readme.md)** - [Next Challenge](./03-AVD-FSLogix.md)
+
 ## Introduction
 
 Azure Virtual Desktop enables you to configure and customize Remote Desktop Protocol (RDP) properties for a host pool. 
