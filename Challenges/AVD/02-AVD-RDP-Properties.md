@@ -1,6 +1,6 @@
 # Challenge 2: Configure RDP Properties
 
-[Previous Challenge](./01-AVD-Multi-Session-Hostpool.md) - **[Home](../readme.md)** - [Next Challenge](./03-AVD-FSLogix.md)
+[Previous Challenge](./01-AVD-Multi-Session-Hostpool.md) - **[Home](../../readme.md)** - [Next Challenge](./03-AVD-FSLogix.md)
 
 ## Introduction
 

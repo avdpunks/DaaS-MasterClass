@@ -32,8 +32,8 @@ You’ll finish this Master Class with the understanding and abilities necessary
 
 1.	Welcome [15min]
 2.	Introduction - Windows 365, Azure Virtual Desktop and Dev Box [45min]
-3.	Getting started with Windows 365 [120min]
-4.	Getting started with Azure Virtual Desktop [120min]
+3.  Getting started with Azure Virtual Desktop [120min]
+4.	Getting started with Windows 365 [120min]
 5.	Getting started with Microsoft Dev Box [60min]
 6.	Q&A
 
@@ -55,21 +55,21 @@ You will receive your Admin & User credential personally and take good care of i
 
 ## Challenges
 
-### Windows 365
-
-- Challenge 1: **[Provisioning a Cloud PC](Challenges/01-W365-Provisioning-CPC.md)**
-- Challenge 2: **[Configure RDP Properties](Challenges/02-W365-RDP-Properties.md)**
-- Challenge 3: **[Deploy application via Intune](Challenges/03-W365-App-Deployment.md)**
-
 ### Azure Virtual Desktop
 
-- Challenge 1: **[Create a host pool for multi-session desktops](Challenges/01-AVD-Multi-Session-Hostpool.md)**
-- Challenge 2: **[Configure RDP Properties](Challenges/02-AVD-RDP-Properties.md)**
-- Challenge 3: **[Enable FSLogix Profile Container](Challenges/03-AVD-FSLogix.md)**
+- Challenge 1: **[Create a host pool for multi-session desktops](Challenges/AVD/01-AVD-Multi-Session-Hostpool.md)**
+- Challenge 2: **[Configure RDP Properties](Challenges/AVD/02-AVD-RDP-Properties.md)**
+- Challenge 3: **[Enable FSLogix Profile Container](Challenges/AVD/03-AVD-FSLogix.md)**
+
+### Windows 365
+
+- Challenge 1: **[Provisioning a Cloud PC](Challenges/W365/01-W365-Provisioning-CPC.md)**
+- Challenge 2: **[Configure RDP Properties](Challenges/W365/02-W365-RDP-Properties.md)**
+- Challenge 3: **[Deploy application via Intune](Challenges/W365/03-W365-App-Deployment.md)**
 
 ### Dev Box
 
-- Challenge 1: **[Configure Microsoft Dev Box](Challenges/01-DevBox-Configure-Dev-Box.md)**
+- Challenge 1: **[Configure Microsoft Dev Box](Challenges/DevBox/01-DevBox-Configure-Dev-Box.md)**
 
 ## Contributor
 

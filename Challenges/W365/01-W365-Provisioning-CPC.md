@@ -1,6 +1,6 @@
 # Challenege 1: Provisioning a Cloud PC
 
-[Previous Challenge](./03-AVD-FSLogix.md) - **[Home](../readme.md)** - [Next Challenge](./02-W365-RDP-Properties.md)
+[Previous Challenge](../AVD/03-AVD-FSLogix.md) - **[Home](../../readme.md)** - [Next Challenge](./02-W365-RDP-Properties.md)
 
 ## Introduction
 

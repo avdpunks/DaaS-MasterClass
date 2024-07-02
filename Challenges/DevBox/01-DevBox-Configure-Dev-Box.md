@@ -1,6 +1,6 @@
 # Challenege 1: Configure Microsoft Dev Box
 
-[Previous Challenge](./03-W365-App-Deployment.md) - **[Home](../readme.md)** - [Next Challenge](../readme.md)
+[Previous Challenge](./03-W365-App-Deployment.md) - **[Home](../../readme.md)** - [Next Challenge](../../readme.md)
 
 ## Introduction
 
