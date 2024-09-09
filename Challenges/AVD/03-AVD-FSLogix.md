@@ -30,9 +30,9 @@ In order to use profile containers, you'll need to configure FSLogix on your ses
 
 >**Note:** The FSLogix agent is already installed on the Windows 10 or 11 Enterprise Multisession Gallery images provided by Microsoft.
 
-- Enable FSLogix profile settings via a custom script extension.
+- Enable FSLogix profile settings via a custom script extension or via Intune.
 
->**Pro Tipp:** 💡 To setup FSLogix on the session Hosts, you can to upload the setupFSLogix.ps1 into a Container in your Storage Account and use a [Custom Script Extension Setup FSLogix](../Sources/setupFSLogix.ps1). As an argument: provide the **UNC Path of your fileshare**, e. g. \\uniquesamicroh.file.core.windows.net\fslogixfs without brakets.
+>**Pro Tipp:** 💡 To setup FSLogix on the session Hosts with a custom script extension, you can to upload the [setupFSLogix.ps1](../Sources/setupFSLogix.ps1) into a Container in your Storage Account. As an argument: provide the **UNC Path of your fileshare**, e. g. \\uniquesamicroh.file.core.windows.net\fslogixfs without brakets.
 
 - Delete local profiles when a VHD profile is applied
 - Create a profile container with FSLogix during user login
