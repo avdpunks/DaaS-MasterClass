@@ -17,6 +17,8 @@ Create multi-session hostpool joined in Azure Active Directory
 - Domain to join: Microsoft Entra ID (Enroll with Intune “Yes”)
 - Register desktop app group to new workspace
 - Assign users
+- Enable Microsoft Entra ID single sign on: "Connections will use Microsoft Entra authentication to provide single sign-on."
+
 
 Login to the session host
 - Log in as a user and verify that the operating system is a multi-session build
