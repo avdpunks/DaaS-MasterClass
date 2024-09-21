@@ -3,8 +3,6 @@
 # DaaS Master Class
 
 This master class is designed to help you get hands-on experience with Windows 365 (W365), Azure Virtual Desktop (AVD) and Microsoft Dev Box (DevBox). 
-
->**Note:** [Microsoft Copilot for Azure (preview)](https://learn.microsoft.com/en-us/azure/copilot/overview) is enabled for this master class. To use Microsoft Copilot for Azure (preview) you must allow websocket connections to https://directline.botframework.com.
  
 W365 - is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. Each Cloud PC is assigned to an individual user and is their dedicated Windows device. Windows 365 provides the productivity, security, and collaboration benefits of Microsoft 365.
 
