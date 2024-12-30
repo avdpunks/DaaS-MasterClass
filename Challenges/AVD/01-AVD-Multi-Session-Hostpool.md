@@ -11,7 +11,8 @@ In this challenge you will create Microsoft Entra ID joined pooled desktops from
 Create multi-session hostpool joined in Azure Active Directory
 - Region: North Europe
 - Metadata location: North Europe
-- Validation environment: Yes
+- Validation environment: No
+- Create Session Host Configuration: No
 - Host Pool type: Pooled
 - Compute family: Dv5 Family
 - Choose Windows 11 Enterprise multi-session Version + Microsoft 365 Apps Gallery image  
