@@ -25,7 +25,6 @@ You’ll finish this Master Class with the understanding and abilities necessary
 - Basic Azure knowledge [(Azure fundamentals)](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/)
 - Basic Intune knowledge [(Microsoft Intune fundamentals)](https://learn.microsoft.com/en-us/training/paths/endpoint-manager-fundamentals/)
 
-
 ## Agenda
 
 1.	Welcome [15min]
@@ -50,6 +49,11 @@ This is the W365, AVD & DevBox Masterclass Architecture:
 ## Credentials
 
 You will receive your Admin & User credential personally and take good care of it.
+
+# Access Windows Cloud Solutions
+
+- [Webclient](https://windows.cloud.microsoft/)
+- [Windows App (store)](https://apps.microsoft.com/detail/9N1F85V9T8BN) or [Windows App (offline installer)](https://go.microsoft.com/fwlink/?linkid=2262633)
 
 ## Challenges
 
