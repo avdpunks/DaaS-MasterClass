@@ -15,7 +15,7 @@ Create multi-session hostpool joined in Azure Active Directory
 - Host Pool type: Pooled
 - Compute family: Dv5 Family
 - Choose Windows 11 Enterprise multi-session Version + Microsoft 365 Apps Gallery image  
-- Domain to join: Microsoft Entra ID (Enroll with Intune “Yes”)
+- Domain to join: Microsoft Entra ID (Enroll with Intune “No”)
 - Register desktop app group to new workspace
 - Assign users
 - Enable Microsoft Entra ID single sign on: "Connections will use Microsoft Entra authentication to provide single sign-on."
