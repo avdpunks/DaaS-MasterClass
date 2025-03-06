@@ -35,7 +35,7 @@ and assign the **Windows 365 Enterprise license**.
 
 ## Option 2 
 
-Sign in to the [Azure portal](https://portal.azure.com) with a license administrator account and browse to the Azure Active Directory. As an option you can directly sign in at [Azure AD Portal](https://aad.portal.azure.com)
+Sign in to the [Azure portal](https://portal.azure.com) with a license administrator account and browse to the Microsoft Entra ID. As an option you can directly sign in at [Microsoft Entra ID](https://entra.microsoft.com/).
 
 💡To manage licenses, the account must be a **License Administrator**, **User Administrator**, or **Global Administrator**.
 
