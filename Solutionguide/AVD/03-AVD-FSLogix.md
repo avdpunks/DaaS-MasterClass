@@ -84,7 +84,7 @@ Next, **Review + create** to create the Azure file share.
 
 > Note: To use SMB protocol with this share, you need to check if you can communicate over port 445. [Script for Windows Client](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows)
 
-When the file share is created, navigate to File shares in your Storage account. Beneath File share settings, click on **Active directory: Not configured**.
+When the file share is created, navigate to File shares in your Storage account. Beneath File share settings, click on **Identity-based access: Not configured**.
 We need to enable Identity-based access for the file share in this storage account.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-6.png)
