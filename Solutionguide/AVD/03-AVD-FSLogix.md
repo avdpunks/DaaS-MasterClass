@@ -36,8 +36,6 @@ In order to use profile containers, you'll need to configure FSLogix on your ses
 - A profile container with FSLogix is successfully created 
 - Check that your profiles are working as expected
 
-
-
 ## Task 1: Create a storage account
 Azure file shares are deployed into storage accounts, which are top-level objects that represent a shared pool of storage. This pool of storage can be used to deploy multiple file shares.
 
@@ -56,7 +54,7 @@ FileStorage storage accounts: FileStorage storage accounts allow you to deploy A
 Create a general-purposev2 storage account with the following settings:
 - Resource group: **select your Resource group**
 - Storage account name: **fslogixprofilefs (or something similar)**
-- Region: **West Europe**
+- Region: **North Europe**
 - Performance: **Standard**
 - Redundancy: **Locally-redundant storage (LRS)**
 - Click **Review** and then **Create**
