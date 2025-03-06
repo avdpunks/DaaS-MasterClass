@@ -8,7 +8,7 @@ In this challenge you will create Microsoft Entra ID joined pooled desktops from
 
 ## Challenge
 
-Create multi-session hostpool joined in Azure Active Directory
+Create AVD multi-session hostpool joined in Microsoft Entra ID:
 - Region: **North Europe**
 - Metadata location: **North Europe**
 - Validation environment: **No**
