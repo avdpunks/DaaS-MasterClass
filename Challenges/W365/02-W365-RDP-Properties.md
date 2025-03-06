@@ -10,9 +10,9 @@ For **security** reasons, you want to override the default and block some device
 
 In General there are two ways to manage these redirections:
 
-**Settings Catalog**: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
+**Settings Catalog**: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Microsoft Entra ID joined and Microsoft Entra ID hybrid joined Cloud PCs.
 
-**Group Policy Object (GPO)**: Use GPOs in Windows Server Active Directory. Supports hybrid Azure AD join Cloud PCs only.
+**Group Policy Object (GPO)**: Use GPOs in Windows Server Active Directory. Supports Microsoft Entra ID hybrid joined Cloud PCs only.
 
 ## Challenge
 
