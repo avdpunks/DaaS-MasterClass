@@ -46,7 +46,7 @@ Create new Remote Apps
    
 ![This image shows where to select host pools under manage and select add to add a new host pool.](../../Images/SolutionGuide/AVD/01-avdHostPool.png "Azure Virtual Desktop blade")
 
-4.  On the Basics page, refer to the following screenshot to fill in the required fields. Select your Subscription, Resource Group and define a Hostpool name. As Location choose **West Europe**. 
+4.  On the Basics page, refer to the following screenshot to fill in the required fields. Select your Subscription, Resource Group and define a Hostpool name. As Location choose **North Europe**. 
 
 > **Info:** This will only effect metadata. The Datacenter location for virtual machines will follow. 
 
