@@ -14,7 +14,7 @@ It is important that your users have Visual Studio Code installed.
 
 ## Success Criteria
 
-1.	Visual Studio Code, with the name **App-PUNK[count]-YourAppName** is available as a new Windows application (Win32) in Intune.
+1.	Visual Studio Code, with the name **App-P[count]-YourAppName** is available as a new Windows application (Win32) in Intune.
 2.  Application Visual Studio Code is assigned and installed on your Cloud PC.
 
 ## Learning Resources
