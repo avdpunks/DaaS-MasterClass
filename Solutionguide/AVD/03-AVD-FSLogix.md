@@ -56,6 +56,7 @@ Create a general-purposev2 storage account with the following settings:
 - Storage account name: **fslogixprofilefs (or something similar)**
 - Region: **North Europe**
 - Performance: **Standard**
+- File share billing: **Pas-as-you-go file shares**
 - Redundancy: **Locally-redundant storage (LRS)**
 - Click **Review** and then **Create**
 
