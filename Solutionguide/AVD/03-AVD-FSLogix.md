@@ -89,19 +89,23 @@ We need to enable Identity-based access for the file share in this storage accou
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-6.png)
 
-As we are using Microsoft Entra ID Kerberos in this Microhack, click on **Azure AD Kerberos**.
+As we are using Microsoft Entra ID Kerberos in this Master Class, click on **Microsoft Entra Kerberos**.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-7.png)
 
-**Click on the check-box** to enable Azure AD Kerberos for this file share. 
+**Click on the check-box** to enable Microsoft Entra Kerberos for the file share service. 
 To configure directory and file level permissions through Windows File explorer, you also need to specify domain name and domain GUID for your on-premises AD. 
 You can get this information from your domain admin or from an on-premises AD-joined client. If you prefer to configure using icacls, this step is not required. 
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-8.png)
 
+Next follows step 2 to set the authorizations at release level. You should activate the default share-level permissionfor all authenticated users and groups with **Storage File Data SMB Share Contributor**.
+
+![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-9.png)
+
 Now comes a very important step for which you need at least the **Cloud Application Administrator** role for your tenant. You could also ask a **Global Admin** within your organization to perform this one-time task to finish the Azure AD Kerberos setup.
 
-Navigate to the **App Registrations** in the **Azure AD** management overview. Switch to **All Applications** and find an app registration which starts with **[Storage Account]Storageaccountname.file.core.windows.net**.
+Navigate to the **App Registrations** in the **Microsoft Entra ID** management overview. Switch to **All Applications** and find an app registration which starts with **[Storage Account]Storageaccountname.file.core.windows.net**.
 
 ![Create Storage account](../../Images/SolutionGuide/AVD/03-FSLogix_create-storage-account-16.png)
 
