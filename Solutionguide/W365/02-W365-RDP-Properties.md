@@ -34,35 +34,35 @@ Lastly, you need to check that the processing status of the dynamic rule is not 
 
 First open the **Devices** tab and select **Configuration profiles** then **Create profile** to create a new Intune Device Configuration Profile.
 
-![RDPSettings-1.png](../../Images/SolutionGuide/W365/RDPSettings-1.png)
+![RDPSettings-1.png](../../Images/SolutionGuide/W365/02-RDPSettings-1.png)
 
 Select **Windows 10 and later** as Platform and **Settings catalog** as Profile type and click **Create**.
 
-![RDPSettings-2.png](../../Images/SolutionGuide/W365/RDPSettings-2.png)
+![RDPSettings-2.png](../../Images/SolutionGuide/W365/02-RDPSettings-2.png)
 
 Enter your configuration profile name **CP-%PUNK%-TEXT**, e.g. CP-P1-RDP-Restrictions and click **Next**.
 
-![RDPSettings-3.png](../../Images/SolutionGuide/W365/RDPSettings-3.png)
+![RDPSettings-3.png](../../Images/SolutionGuide/W365/02-RDPSettings-3.png)
 
 Click **+ Add settings** to add settings to your configuration profile. 
 
-![RDPSettings-4.png](../../Images/SolutionGuide/W365/RDPSettings-4.png)
+![RDPSettings-4.png](../../Images/SolutionGuide/W365/02-RDPSettings-4.png)
 
 Next, search for **Remote Desktop** and open the catagory with **...\Device and Resource Redirection** then select **Do no allow Clipboard redirection** and **Do not allow drive redirection**.
 
 After that you can close the settings picker.
 
-![RDPSettings-5.png](../../Images/SolutionGuide/W365/RDPSettings-5.png)
+![RDPSettings-5.png](../../Images/SolutionGuide/W365/02-RDPSettings-5.png)
 
 On the Configuration Settings tab, you must enable both RDP settings and click **Next**.
 
-![RDPSettings-6.png](../../Images/SolutionGuide/W365/RDPSettings-6.png)
+![RDPSettings-6.png](../../Images/SolutionGuide/W365/02-RDPSettings-6.png)
 
 The Scope Tags tab can be skipped, but the Assignment tab is important. Here you need to **Add Groups** add your specific Cloud PC device group, e.g. GRP-P1 devices.
 
 Click **Next** and then **Create**.
 
-![RDPSettings-7.png](../../Images/SolutionGuide/W365/RDPSettings-7.png)
+![RDPSettings-7.png](../../Images/SolutionGuide/W365/02-RDPSettings-7.png)
 ## Learning Resources
 - [Manage RDP Devices](https://learn.microsoft.com/en-us/windows-365/enterprise/manage-rdp-device-redirections)
 - [Dynamic membership rules for groups in Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-dynamic-membership)

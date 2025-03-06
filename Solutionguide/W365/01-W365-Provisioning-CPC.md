@@ -20,38 +20,37 @@ To set up your system to provision on-demand Cloud PCs for you, you need to:
 4.  A Cloud PC deployment is running.
 
 ## Step 1 - License assignment
-## Option 1 (for full transparency)
-
+###  Option 1 - User Assignment
 You can assign licenses directly to users from the [M365 Admin Center](https://admin.microsoft.com).
 
 Select **Active users** > **Select a user**
-![001-license.png](../../Images/SolutionGuide/001-license.png)
+![001-license.png](../../Images/SolutionGuide/W365/001-license.png)
 
 Select **License and apps** and 
-![002-license.png](../../Images/SolutionGuide/002-license.png)
+![002-license.png](../../Images/SolutionGuide/W365/002-license.png)
 
 and assign the **Windows 365 Enterprise license**.
-![003-license.png](../../Images/SolutionGuide/003-license.png)
+![003-license.png](../../Images/SolutionGuide/W365/003-license.png)
 
-## Option 2 
+### Option 2 - Group Assignment
 
 Sign in to the [Azure portal](https://portal.azure.com) with a license administrator account and browse to the Microsoft Entra ID. As an option you can directly sign in at [Microsoft Entra ID](https://entra.microsoft.com/).
 
 💡To manage licenses, the account must be a **License Administrator**, **User Administrator**, or **Global Administrator**.
 
-![004-license.png](../../Images/SolutionGuide/004-license.png)
+![004-license.png](../../Images/SolutionGuide/W365/004-license.png)
 
 Select **create group** to create a new group or **select the group** you want the licenses to be assigned to. 
 
-![005-license.png](../../Images/SolutionGuide/005-license.png)
+![005-license.png](../../Images/SolutionGuide/W365/005-license.png)
 
 Browse to Licenses to open a page where you can see and manage all licensable products in the organization.
 
-![006-license.png](../../Images/SolutionGuide/006-license.png)
+![006-license.png](../../Images/SolutionGuide/W365/006-license.png)
 
 Under All products, select both Intune and the Windows 365 Cloud PC SKU license. Select Assign and save.
 
-![007-license.png](../../Images/SolutionGuide/007-license.png)
+![007-license.png](../../Images/SolutionGuide/W365/007-license.png)
 
 ## Step 2 - Configure user settings
 
@@ -61,18 +60,18 @@ In the Microsoft Intune admin center, navigate to **Devices** > **Windows 365** 
 
 Click + **Add**
 
-![021-intuneUserSettings.png](../../Images/SolutionGuide/021-intuneUserSettings.png)
+![021-intuneUserSettings.png](../../Images/SolutionGuide/W365/021-intuneUserSettings.png)
 
 Give the policy a name and configure whether you want that users get local admin rights or not. 
 Click **Next**
 
-![022-intuneUserSettings.png](../../Images/SolutionGuide/022-intuneUserSettings.png)
+![022-intuneUserSettings.png](../../Images/SolutionGuide/W365/022-intuneUserSettings.png)
 
 Select your **Azure AD user group** and click Next
 
 Click **Create**
 
-![023-intuneUserSettings.png](../../Images/SolutionGuide/023-intuneUserSettings.png)
+![023-intuneUserSettings.png](../../Images/SolutionGuide/W365/023-intuneUserSettings.png)
 
 ## Step 3 - Create an Azure network connection (max. 10 ANC per Tenant)
 
@@ -86,16 +85,16 @@ You can choose one of the following options.
 
 Note: Intune and Azure AD Connect configuration is required for Hybrid Azure AD Join.
 
-![017-intuneANC.png](../../Images/SolutionGuide/017-intuneANC.png)
+![017-intuneANC.png](../../Images/SolutionGuide/W365/017-intuneANC.png)
 
 Give the Azure Network connection a name. Select your subscription, the resource group and virtual network including the subnet.
 Click **Next**
 
-![018-intuneANC.png](../../Images/SolutionGuide/018-intuneANC.png)
+![018-intuneANC.png](../../Images/SolutionGuide/W365/018-intuneANC.png)
 
 and finish with **Review + create**
 
-![019-intuneANC.png](../../Images/SolutionGuide/019-intuneANC.png)
+![019-intuneANC.png](../../Images/SolutionGuide/W365/019-intuneANC.png)
 
 This will start the creation of the Azure network connection within the Microsoft Intune admin center.
 
@@ -107,32 +106,32 @@ To provision a Cloud PC a Provisioning Policy needs to be created. You can creat
 
 Navigate to **Devices** > **Windows 365** and click **Provisioning Policy** and select **Create policy**.
 
-![010-intunePP.png](../../Images/SolutionGuide/010-intunePP.png)
+![010-intunePP.png](../../Images/SolutionGuide/W365/010-intunePP.png)
 
 Give the policy a **name** and select the **Join type**. Azure AD Join or Hybrid Azure AD Join. For Network, select the Microsoft hosted network, or an existing Azure network connection.
 
 Select Use single sign-on and click **Next**
 
-![011-intunePP.png](../../Images/SolutionGuide/011-intunePP.png)
+![011-intunePP.png](../../Images/SolutionGuide/W365/011-intunePP.png)
 
 Select an image from the **Gallery image**. When you choose Gallery image you have the choice for Windows 10 or 11, with or without the Microsoft 365 apps and the version/build.
 Select the image of choice and click **Next**
 
-![012-intunePP.png](../../Images/SolutionGuide/013-intunePP.png)
+![012-intunePP.png](../../Images/SolutionGuide/W365/013-intunePP.png)
 
 Select the **Language & Region** of your choice and the way you want to update the Cloud PC. This can be manually (via Windows update policies in Microsoft Intune) or via the Autopatch service.
 Click **Next**
 
-![014-intunePP.png](../../Images/SolutionGuide/014-intunePP.png)
+![014-intunePP.png](../../Images/SolutionGuide/W365/014-intunePP.png)
 
 
 Select an **Azure AD security group** and click Next.
 
-![015-intunePP.png](../../Images/SolutionGuide/015-intunePP.png)
+![015-intunePP.png](../../Images/SolutionGuide/W365/015-intunePP.png)
 
 Click **Create**
 
-![016-intunePP.png](../../Images/SolutionGuide/016-intunePP.png)
+![016-intunePP.png](../../Images/SolutionGuide/W365/016-intunePP.png)
 
 After the provisioning policy is created, Cloud PCs of assigned users will be automatically provisioned. 
 
@@ -144,11 +143,11 @@ Let's connect to the Windows 365 Cloud.
 
 Use the **web client**. Navigate to  https://windows365.microsoft.com/
 
-![to be created ... 025-client.png](../../Images/SolutionGuide/024-client.png)
+![to be created ... 025-client.png](../../Images/SolutionGuide/W365/024-client.png)
 
 Use the **Windows 365 Store Client**. Open the Microsoft Store and install the Windows 365 Client. 
 
-![024-client.png](../../Images/SolutionGuide/025-client.png)
+![024-client.png](../../Images/SolutionGuide/W365/025-client.png)
 
 
 ## Learning Resources
