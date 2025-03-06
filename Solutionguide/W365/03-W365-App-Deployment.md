@@ -22,25 +22,25 @@ It is important that your users have Visual Studio Code installed.
 
 2. Click **Add** to add a new Windows app and select the app type **Windows app (Win32)**, then confirm with **Select**.
 
-![034-AppDeployment.png](../../Images/SolutionGuide/034-AppDeployment.png)
+![034-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-0.png)
 
 > **Note**: For Windows apps (Win32), you need to convert the installation sources, such as exe or msi, into an intunewim package. [Here you will find the prep tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool)
 
-![035-AppDeployment.png](../../Images/SolutionGuide/035-AppDeployment.png)
+![035-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-1.png)
 
 3. Next, choose **your application package in format intunewim** and click **OK**. 
 
 > **Note**: If you do not want to create your own VSCode Intunewim package, we have prepared a package [here.](../Solutionguide/Sources/VSCodeSetup-x64.intunewin)
 
-![036-AppDeployment.png](../../Images/SolutionGuide/036-AppDeployment.png)
+![036-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-2.png)
 
 4. Enter your **App name**, e.g. APP-P1-VSCodeSetup, and the publisher and click **Next**.
 
-![037-AppDeployment.png](../../Images/SolutionGuide/037-AppDeployment.png)
+![037-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-3.png)
 
 5. On the Program tab, you need to set the installation and uninstallation commands for the application. 
 
-![038-AppDeployment.png](../../Images/SolutionGuide/038-AppDeployment.png)
+![038-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-4.png)
 
 For VSCode you can use the following commands:
 
@@ -54,13 +54,13 @@ Select **System** as the installation behavior and click **Next**.
 
 6. On the Requirements tab, you need to specify the requirements that devices must meet before the app can be installed.
 
-![039-AppDeployment.png](../../Images/SolutionGuide/039-AppDeployment.png)
+![039-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-5.png)
 
 Select **64-bit** as the operating system architecture and, for example, **Windows 11 21H2** as the minimum operating system. Then click **Next**.
 
 7. Next, you need to set up a detection rule when the app is successfully installed.
 
-![040-AppDeployment.png](../../Images/SolutionGuide/040-AppDeployment.png)
+![040-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-6.png)
 
 Select **Manually configure detection rules** as the rules format and click **Add**. 
 
@@ -73,13 +73,13 @@ Select **Manually configure detection rules** as the rules format and click **Ad
  | File or folder | Code.exe |
  | Detection method | File or folder exists|
 
-![041-AppDeployment.png](../../Images/SolutionGuide/041-AppDeployment.png)
+![041-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-7.png)
 
 9. Then you can skip the Dependencies and Substitutions tab and continue with the Assignments tab.
 
 Under Requried, click **+ Add group** and select your device group, e.g. GRP-P1-Devices, and then click **Next** to check all settings.
 
-![042-AppDeployment.png](../../Images/SolutionGuide/042-AppDeployment.png)
+![042-AppDeployment.png](../../Images/SolutionGuide/W365/03-AppDeployment-8.png)
 
 10. Lastly, click **Create** to add a new Windows application (Win32) to Intune.
 
