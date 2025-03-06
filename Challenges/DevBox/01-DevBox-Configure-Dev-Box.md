@@ -16,7 +16,7 @@ To set up your Azure Dev Center to provide Dev Boxes to your developers, you nee
 
 - Create a dev center 
 - Create **two dev box definition** with the following specs:
-    - Windows 11 Enterprise 23h2
+    - Windows 11 Enterprise 24h2
     - Visual Studio 2022 Enterprise and Microsoft 365 are pre-installed
     - 8 vCPU, 32 GB RAM and 16 vCPU, 64 GB RAN
     - 256 GB disk storage
