@@ -6,19 +6,18 @@ You have purchased one Windows 365 licenses. At this point, you can start with t
 
 To set up your system to provision on-demand Cloud PCs for you, you need to:
 
-- An AAD group with **GRP-PUNK[count]-Users**, e.g. GRP-P1-Users, is already created.
-- Assign licenses to your user/group.
+- An Entra ID group with **GRP-P[count]-Users**, e.g. GRP-P1-Users, is already created.
+- Assign licenses to your user or group.
 - Your User should have local admin rights for his Cloud PC.
-- Create an Azure network connection (ANC) so that the cloud PC runs on a self-hosted network.
+- Your Cloud PC is using the Microsoft Hosted Networks.
 - Create a provisioning policy.
-- **Make sure your Cloud PC has a custom name that is not the default.**
+- **Make sure your Cloud PC has a custom name that is not the default, for example: CPCP1-%RAND:5%"**
 
 ## Success Criteria
 1.  A Windows365 & Intune License is automatically assigned to your users.
 2.  Your User has local admin rights.
-3.  (If one of the first 10) An ANC is created and the Cloud PC is deployed into a self-hosted network
-4.  A provisioning policy with **PP-PUNK[count]-YourPolicyName** is created.
-5.  A Cloud PC deployment is running.
+3.  A provisioning policy with **PP-P[count]-YourPolicyName** is created.
+4.  A Cloud PC deployment is running.
 
 ## Step 1 - License assignment
 ## Option 1 (for full transparency)
