@@ -11,7 +11,7 @@ To set up your system to provision on-demand Cloud PCs for you, you need to:
 - Your User should have local admin rights for his Cloud PC.
 - Your Cloud PC is using the Microsoft Hosted Networks.
 - Create a provisioning policy.
-- **Make sure your Cloud PC has a custom name that is not the default, for example: CPCP1-%RAND:5%"**
+- **Make sure your Cloud PC has a custom name that is not the default, for example: CPC-P1-%RAND:5%"**
 
 ## Success Criteria
 1.  A Windows365 & Intune License is automatically assigned to your users.
