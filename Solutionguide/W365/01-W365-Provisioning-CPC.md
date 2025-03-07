@@ -114,9 +114,9 @@ On the **Settings** tab, make the following settings:
 | Geography  | **Germany** | You can also select **European Union**. |
 | Use Microsoft Entra single sign-on | **Enabled** |
 
-And then click **Next**.
-
 ![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-2.png)
+
+And then click **Next**.
 
 Select an image from the **Gallery image**. When you choose Gallery image you have the choice for Windows 10 or 11, with or without the Microsoft 365 apps and the version/build.
 
