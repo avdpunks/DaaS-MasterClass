@@ -27,7 +27,7 @@ You can find more information about M365 administrator roles [here.](https://lea
 
 There are two options for assigning licenses to users. 
 
-###  Option 1 - Per User Assignment
+###  [Option 1] - Per User Assignment
 
 The first option is to assign per user. To do this, you need to select **Users** and then **Active users** to get the list of all active users. Then search for your user, e.g. **Punk1**, and select **User, Punk1**. 
 
@@ -41,7 +41,7 @@ Select **Microsoft 365 E5 EEA (without Teams)** to license the Microsoft 365 Off
 
 And click **Save changes**.
 
-### Option 2 - Per Group Assignment
+### [Option 2] - Per Group Assignment
 
 Another option is to assign licenses per group. To do this, you must select **Billing** and then **Licenses**. Under **Subscriptions** you should find all available licenses. Then click on **Windows 365 Enterprise 2 vCPU, 8 GB, 128 GB**. 
 
