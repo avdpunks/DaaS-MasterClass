@@ -20,37 +20,44 @@ To set up your system to provision on-demand Cloud PCs for you, you need to:
 4.  A Cloud PC deployment is running.
 
 ## Step 1 - License assignment
-###  Option 1 - User Assignment
-You can assign licenses directly to users from the [M365 Admin Center](https://admin.microsoft.com).
 
-Select **Active users** > **Select a user**
-![001-license.png](../../Images/SolutionGuide/W365/001-license.png)
+Sign in to the [M365 Admin Center](https://admin.microsoft.com) with an account that has enough permissions to manage licenses, e.g. with the License Admin role. 
 
-Select **License and apps** and 
-![002-license.png](../../Images/SolutionGuide/W365/002-license.png)
+You can find more information about M365 administrator roles [here.](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide)
 
-and assign the **Windows 365 Enterprise license**.
-![003-license.png](../../Images/SolutionGuide/W365/003-license.png)
+There are two options for assigning licenses to users. 
 
-### Option 2 - Group Assignment
+###  Option 1 - Per User Assignment
 
-Sign in to the [Azure portal](https://portal.azure.com) with a license administrator account and browse to the Microsoft Entra ID. As an option you can directly sign in at [Microsoft Entra ID](https://entra.microsoft.com/).
+The first option is to assign per user. To do this, you need to select **Users** and then **Active users** to get the list of all active users. Then search for your user, e.g. **Punk1**, and select **User, Punk1**. 
 
-💡To manage licenses, the account must be a **License Administrator**, **User Administrator**, or **Global Administrator**.
+![M365 Admin Center - Active Users](../../Images/SolutionGuide/W365/01-W365-License-Assignment-1.png)
 
-![004-license.png](../../Images/SolutionGuide/W365/004-license.png)
+You can assign the required licenses in the user overview under **Licenses and apps**. 
 
-Select **create group** to create a new group or **select the group** you want the licenses to be assigned to. 
+Select **Microsoft 365 E5 EEA (without Teams)** to license the Microsoft 365 Office applications and Microsoft Intune. Additionally select the **Windows 365 Enterprise 2 vCPU, 8 GB, 128 GB** license. 
 
-![005-license.png](../../Images/SolutionGuide/W365/005-license.png)
+![M365 Admin Center - User license assignment](../../Images/SolutionGuide/W365/01-W365-License-Assignment-2.png)
 
-Browse to Licenses to open a page where you can see and manage all licensable products in the organization.
+And click **Save changes**.
 
-![006-license.png](../../Images/SolutionGuide/W365/006-license.png)
+### Option 2 - Per Group Assignment
 
-Under All products, select both Intune and the Windows 365 Cloud PC SKU license. Select Assign and save.
+Another option is to assign licenses per group. To do this, you must select **Billing** and then **Licenses**. Under **Subscriptions** you should find all available licenses. Then click on **Windows 365 Enterprise 2 vCPU, 8 GB, 128 GB**. 
 
-![007-license.png](../../Images/SolutionGuide/W365/007-license.png)
+![M365 Admin Center - Billing - Licenses](../../Images/SolutionGuide/W365/01-W365-License-Assignment-3.png)
+
+Select **Group** and then **+ Assign licenses**. 
+
+> **Note:** Here it is also possible to select users in order to assign a license to a specific user account.    
+
+![M365 Admin Center - W365 License](../../Images/SolutionGuide/W365/01-W365-License-Assignment-4.png)
+
+Next, search for your user group, e.g. **GRP-P1-Users**, and click **Assign**.
+
+![M365 Admin Center - W365 License](../../Images/SolutionGuide/W365/01-W365-License-Assignment-5.png)
+
+Repeat the previous step to assign the Microsoft 365 E5 licenses to your user group as well. 
 
 ## Step 2 - Configure user settings
 
