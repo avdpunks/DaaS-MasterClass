@@ -29,5 +29,5 @@ To set up your system to provision on-demand Cloud PCs for you, you need to:
 
 ## Learning Resources
 - [Deployment overview](https://learn.microsoft.com/en-us/windows-365/enterprise/deployment-overview)
-- [Group Assignments](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/licensing-groups-assign)
+- [User settings](https://learn.microsoft.com/en-us/windows-365/enterprise/assign-users-as-local-admin)
 - [Create a provisioning policy](https://learn.microsoft.com/en-us/windows-365/enterprise/create-provisioning-policy)

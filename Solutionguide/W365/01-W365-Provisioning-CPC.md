@@ -150,20 +150,14 @@ You should then see under **All Cloud PCs** that the provisioning of the Cloud P
 
 Let's connect to the Windows 365 Cloud PC.
 
-### [Option 1] Windows App Web client
+Open the [**Windows App Web client**](https://windows365.microsoft.com/ent) or use the **Windows App** and open the **Microsoft Store** and search for **Windows App**. If the Microsoft Store is blocked then you can use the [Windows App offline installer](https://go.microsoft.com/fwlink/?linkid=2262633) 
 
-Open the [**Windows App Web client**](https://windows.cloud.microsoft/) and log in with your user.  
+Log in with your user and you should see your Cloud PC under **Devices** and click **Connect** to connect to your Cloud PC.  
 
-
-
-### [Option 2] Windows App
-
-Use the **Windows App** and open the **Microsoft Store** and search for **Windows App**. If the Microsoft Store is blocked then you can use the [Windows App offline installer](https://go.microsoft.com/fwlink/?linkid=2262633) 
-
-
+![W365 Windows App Web Client](../../Images/SolutionGuide/W365/01-W365-WindowsApp-1.png)
 
 
 ## Learning Resources
 - [Deployment overview](https://learn.microsoft.com/en-us/windows-365/enterprise/deployment-overview)
-- [Group Assignments](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/licensing-groups-assign)
+- [User settings](https://learn.microsoft.com/en-us/windows-365/enterprise/assign-users-as-local-admin)
 - [Create a provisioning policy](https://learn.microsoft.com/en-us/windows-365/enterprise/create-provisioning-policy)
