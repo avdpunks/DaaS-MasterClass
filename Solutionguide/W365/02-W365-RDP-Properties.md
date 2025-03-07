@@ -16,19 +16,19 @@ In addition no local drive should be available in the remote session.
 
 ## Step 1 - Configure your dynamic group for your Cloud PCs (Devices)
 
-Open the Microsoft Intune Admin Center [https://in.cmd.ms/](https://in.cmd.ms/) and select **Groups** to view all Azure AD groups. 
+Open the Microsoft Intune Admin Center [https://in.cmd.ms/](https://in.cmd.ms/) and select **Groups** to view all Microsoft Entra ID groups. 
 
 Then search for **Devices** (search mode should be enabled) and select your user device group.
 
-![029-group.png](../../Images/SolutionGuide/029-group.png)
+![029-group.png](../../Images/SolutionGuide/W365/02-RDPSettings-Group-1.png)
 
 Next, select **Dynamic Membership Rules** and add a new rule or modify the existing rule to include all devices with the display name that you have configured in the W365 provisioning profile. And then **Save**. 
 
-![030-group.png](../../Images/SolutionGuide/030-group.png)
+![030-group.png](../../Images/SolutionGuide/W365/02-RDPSettings-Group-2.png)
 
 Lastly, you need to check that the processing status of the dynamic rule is not "Paused", otherwise you need to change the processing pause value from **Yes to No**.
 
-![030-group.png](../../Images/SolutionGuide/031-group.png)
+![030-group.png](../../Images/SolutionGuide/W365/02-RDPSettings-Group-3.png)
 
 ## Step 2 - Configure an Intune Device Configuration Profile for the RDP Settings
 
