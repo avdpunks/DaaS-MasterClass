@@ -55,106 +55,112 @@ Select **Group** and then **+ Assign licenses**.
 
 Next, search for your user group, e.g. **GRP-P1-Users**, and click **Assign**.
 
-![M365 Admin Center - W365 License](../../Images/SolutionGuide/W365/01-W365-License-Assignment-5.png)
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-License-Assignment-5.png)
 
 Repeat the previous step to assign the Microsoft 365 E5 licenses to your user group as well. 
 
 ## Step 2 - Configure user settings
 
-With user settings you can determine if a user needs to get local admin rights or not. You can also configure if you want to offer the user a point-in-time restore service where snapshots of the Cloud PC are created in the frequency you configure. User settings policies are published to Azure AD groups and you can create different User settings policies for different groups of users.
+With user settings you can determine if a user needs to get local admin rights or not. You can also configure if you want to offer the user a point-in-time restore service where snapshots of the Cloud PC are created in the frequency you configure. User settings policies are published to Microsoft Entra ID groups and you can create different User settings policies for different groups of users.
 
-In the Microsoft Intune admin center, navigate to **Devices** > **Windows 365** and click **User settings**
+Sign in to the [Microsoft Intune](https://intune.microsoft.com/) and navigate to **Devices** then **Windows 365** to access the Windows 365 management panel. 
 
-Click + **Add**
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-UserSettings-1.png)
 
-![021-intuneUserSettings.png](../../Images/SolutionGuide/W365/021-intuneUserSettings.png)
+Next click **User settings**. 
 
-Give the policy a name and configure whether you want that users get local admin rights or not. 
-Click **Next**
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-UserSettings-2.png)
 
-![022-intuneUserSettings.png](../../Images/SolutionGuide/W365/022-intuneUserSettings.png)
+Select **+ Create** to create a new user settings configuration.
 
-Select your **Azure AD user group** and click Next
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-UserSettings-3.png)
 
-Click **Create**
+On the **Settings** tab, make the following settings:
 
-![023-intuneUserSettings.png](../../Images/SolutionGuide/W365/023-intuneUserSettings.png)
+| Setting         | Value    | 
+|--------------|-----------|
+| Name | Select a name for your user setting, e.g. **UserSettings-P1**      |
+| Enable Local admin     | **Enabled** |
+| Enable users to reset their Cloud PCs  | **Enabled** |
+| Allow user to initiate restore service    | **Enabled** |
+| Frequency of restore-point service    | **12 hours** |
 
-## Step 3 - Create an Azure network connection (max. 10 ANC per Tenant)
+Then click **Next**.
 
-Azure network connections enables you to directly connect to your back-end systems, corporate resources and offices, without the need of a client based VPN solution.
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-UserSettings-4.png)
 
-To create an Azure network connection, navigate to **Devices** > **Windows 365** and click **Azure Network Connections** and select **Add**.
+On the **Assignments** tab, select the **Add groups** option and search for your user group, e.g. **GRP-P1 users** and click **Select**.
 
-You can choose one of the following options.
-**Azure AD Join**: Performs a Azure AD join.
-**Hybrid Azure AD Join** (not possible in this hack): This option enables you to perform an Active Directory Domain Join. 
+![M365 Admin Center - W365 Group license assignment](../../Images/SolutionGuide/W365/01-W365-UserSettings-5.png)
 
-Note: Intune and Azure AD Connect configuration is required for Hybrid Azure AD Join.
+Then click **Next** and **Create**. 
 
-![017-intuneANC.png](../../Images/SolutionGuide/W365/017-intuneANC.png)
+## Step 3 - Create a Provisioning Policy
 
-Give the Azure Network connection a name. Select your subscription, the resource group and virtual network including the subnet.
-Click **Next**
+To provision a Cloud PC a Provisioning Policy needs to be created. You can create multiple Provisioning policies and assign them to different **Entra ID groups**.
 
-![018-intuneANC.png](../../Images/SolutionGuide/W365/018-intuneANC.png)
+In the **Windows 365 management panal** select **Provisioning Policy** and select **+ Create policy**.
 
-and finish with **Review + create**
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-1.png)
 
-![019-intuneANC.png](../../Images/SolutionGuide/W365/019-intuneANC.png)
+On the **Settings** tab, make the following settings:
 
-This will start the creation of the Azure network connection within the Microsoft Intune admin center.
+| Setting         | Value    | Note |
+|--------------|-----------|-----------|
+| Name | Select a name for your provisioning policy, e.g. **PP-P1-CPC-ENGLISCH**      |
+| License type    | **Enterprise** |
+| Join type | **Microsoft Entra Join** |
+| Network    | **Microsoft hosted network** |
+| Geography  | **Germany** | You can also select **European Union**. |
+| Use Microsoft Entra single sign-on | **Enabled** |
 
-After a few minutes the Azure network connection is created and a **“checks successful”** status will be displayed.
+And then click **Next**.
 
-## Step 4 - Create a Provisioning Policy
-
-To provision a Cloud PC a Provisioning Policy needs to be created. You can create multiple Provisioning policies and assign them to different **Azure AD security groups**.
-
-Navigate to **Devices** > **Windows 365** and click **Provisioning Policy** and select **Create policy**.
-
-![010-intunePP.png](../../Images/SolutionGuide/W365/010-intunePP.png)
-
-Give the policy a **name** and select the **Join type**. Azure AD Join or Hybrid Azure AD Join. For Network, select the Microsoft hosted network, or an existing Azure network connection.
-
-Select Use single sign-on and click **Next**
-
-![011-intunePP.png](../../Images/SolutionGuide/W365/011-intunePP.png)
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-2.png)
 
 Select an image from the **Gallery image**. When you choose Gallery image you have the choice for Windows 10 or 11, with or without the Microsoft 365 apps and the version/build.
-Select the image of choice and click **Next**
 
-![012-intunePP.png](../../Images/SolutionGuide/W365/013-intunePP.png)
+Select the **latest Windows 11 Enterprise + Microsoft 365** image and click **Next**
 
-Select the **Language & Region** of your choice and the way you want to update the Cloud PC. This can be manually (via Windows update policies in Microsoft Intune) or via the Autopatch service.
-Click **Next**
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-3.png)
 
-![014-intunePP.png](../../Images/SolutionGuide/W365/014-intunePP.png)
+On the **Configuration** tab, under **Language & Region**, you can change the default language of your Cloud PCs during the provisioning process. This can be manually (via Windows update policies in Microsoft Intune) or via the Autopatch service.
+
+>**Note**: If you select a language pack other than English, the provisioning of Cloud PCs will take longer. 
+
+Under **Cloud PC naming** please activate the option **Apply device name template** so that you can use an individual Cloud PC device name for your users. Enter a **name template**, e.g. **CPC-P1-%RAND:5%**.
+
+For additional services select **None** and click **Next**.
+
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-4.png)
+
+You can skip the **Scope tags** tab and continue with the **Assignments** user group. Click **Add groups** and search for your user group, e.g. **GRP-P1-Users** and click **select**. 
+
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-5.png)
+
+In the last step, click on **Next** and **Create**. 
+
+You should then see under **All Cloud PCs** that the provisioning of the Cloud PC has been started for your user group. 
+
+![W365 Provisioning policy](../../Images/SolutionGuide/W365/01-W365-Provisioning-6.png)
+
+> **Note**: Provisioning a Cloud PC takes around 25-35 minutes and depends on the current queue, region and language configuration.
+
+## Step 4 - Connect to your Cloud PC
+
+Let's connect to the Windows 365 Cloud PC.
+
+### [Option 1] Windows App Web client
+
+Open the [**Windows App Web client**](https://windows.cloud.microsoft/) and log in with your user.  
 
 
-Select an **Azure AD security group** and click Next.
 
-![015-intunePP.png](../../Images/SolutionGuide/W365/015-intunePP.png)
+### [Option 2] Windows App
 
-Click **Create**
+Use the **Windows App** and open the **Microsoft Store** and search for **Windows App**. If the Microsoft Store is blocked then you can use the [Windows App offline installer](https://go.microsoft.com/fwlink/?linkid=2262633) 
 
-![016-intunePP.png](../../Images/SolutionGuide/W365/016-intunePP.png)
 
-After the provisioning policy is created, Cloud PCs of assigned users will be automatically provisioned. 
-
-After the provisioning is finished, the status will be changed to “Provisioned” and the Cloud PC is ready to use.
-
-## Step 5 - Connect to your Cloud PC
-
-Let's connect to the Windows 365 Cloud.
-
-Use the **web client**. Navigate to  https://windows365.microsoft.com/
-
-![to be created ... 025-client.png](../../Images/SolutionGuide/W365/024-client.png)
-
-Use the **Windows 365 Store Client**. Open the Microsoft Store and install the Windows 365 Client. 
-
-![024-client.png](../../Images/SolutionGuide/W365/025-client.png)
 
 
 ## Learning Resources
